@@ -14,7 +14,7 @@
     display: grid; 
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-template-rows: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: repeat(4,minmax(200px, 1fr));
     gap: 1rem;
     /* align-items: center;
     justify-items: center; */
@@ -27,6 +27,7 @@
 }
 
 .item {
+    display: flex;
     align-items: center; 
     justify-items: center;
 }
@@ -65,36 +66,20 @@
     <h1>Header</h1>
 </div>
 <div id="body">
-    <div class="item" id="item1">
-        <div>
-            <p>Item 1</p>
-        </div>
-        
-    </div>
-    <div class="item" id="item2">
-        <p>Item 2</p>
-    </div>
-    <div class="item" id="item3">
-        <p>Item 3</p>
-    </div>
-    <div class="item"  id="item4">
-        <p>Item 4</p>
-    </div>
-    <div class="item" id="item5">
-        <p>Item 5</p>
-    </div>
-    <div class="item"  id="item6">
-        <p>Item 6</p>
-    </div>
-    <div class="item" id="item7">
-        <p>Item 7</p>
-    </div>
-    <div class="item"  id="item8">
-        <p>Item 8</p>
-    </div>
+
 </div>
 <div id="footer">
     <h2>Footer</h2>
 </div>
 </body>
+<script src="jquery_min.js"></script>
+<script>
+    for (let i=0; i<20;i++) {
+        $("#body").append(`<div class="item" id="item${i}">
+        <div>
+            <p>Item ${i}</p>            
+        </div>
+    </div>`);
+    }
+</script>
 </html>
